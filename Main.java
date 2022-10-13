@@ -13,7 +13,6 @@ public class Main {
             int b = joshua.rollSecondDice();
             joshua.determinePoints(a, b);
             joshua.getPoints();
-            System.out.println("getPoints(): " + joshua.getPoints());
 
             if(joshua.getPoints() >= 100) {
                 break;
@@ -24,7 +23,6 @@ public class Main {
             int d = CPU1.rollSecondDice();
             CPU1.determinePoints(c, d);
             CPU1.getPoints();
-            System.out.println("getPoints(): " + CPU1.getPoints());
 
             if(CPU1.getPoints() >= 100) {
                 break;
@@ -35,7 +33,6 @@ public class Main {
             int f = CPU2.rollSecondDice();
             CPU2.determinePoints(e, f);
             CPU2.getPoints();
-            System.out.println("getPoints(): " + CPU2.getPoints());
 
             if(CPU2.getPoints() >= 100) {
                 break;
@@ -46,11 +43,17 @@ public class Main {
             int h = CPU3.rollSecondDice();
             CPU1.determinePoints(g, h);
             CPU3.getPoints();
-            System.out.println("getPoints(): " + joshua.getPoints());
 
             if(CPU3.getPoints() >= 100) {
                 break;
             }
         }
+
+        System.out.println("\nPOINTS");
+        System.out.println("******");
+        System.out.println("Player 1: " + joshua.getName() + " | " + joshua.getPoints());
+        System.out.println("Player 2: " + CPU1.getName() + " | " + CPU1.getPoints());
+        System.out.println("Player 3: " + CPU2.getName() + " | " + CPU2.getPoints());
+        System.out.println("Player 4: " + CPU3.getName() + " | " + CPU3.getPoints());
     }
 }
