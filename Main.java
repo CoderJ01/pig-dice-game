@@ -19,6 +19,7 @@ public class Main {
             int b = joshua.rollSecondDice();
             joshua.determinePoints(a, b);
 
+            // When Player 1 reaches 100 points, end game
             if(w >= 100) {
                 System.out.println(joshua.getName() + " wins the game with " + joshua.getPoints() + " points");
                 break;
@@ -29,6 +30,7 @@ public class Main {
             int d = CPU1.rollSecondDice();
             CPU1.determinePoints(c, d);
 
+            // When Player 2 reaches 100 points, end game
             if(x >= 100) {
                 System.out.println(CPU1.getName() + " wins the game with " + CPU1.getPoints() + " points");
                 break;
@@ -39,6 +41,7 @@ public class Main {
             int f = CPU2.rollSecondDice();
             CPU2.determinePoints(e, f);
 
+            // When Player 3 reaches 100 points, end game
             if(y >= 100) {
                 System.out.println(CPU2.getName() + " wins the game with " + CPU2.getPoints() + " points");
                 break;
@@ -49,6 +52,7 @@ public class Main {
             int h = CPU3.rollSecondDice();
             CPU1.determinePoints(g, h);
 
+            // When Player 4 reaches 100 points, end game
             if(z >= 100) {
                 System.out.println(CPU3.getName() + " wins the game with " + CPU3.getPoints() + " points");
                 break;
