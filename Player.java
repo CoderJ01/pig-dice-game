@@ -103,7 +103,7 @@ public class Player {
         while(!turnContinues) {
             System.out.print("You must roll again. Press 'r' key to roll dice: ");
             obligated = input.next();
-            if(obligated != "r") {
+            if(!obligated.equals("r")) {
                 turnContinues = false;
             }
             else {
@@ -119,10 +119,12 @@ public class Player {
         String option = "";
         System.out.print("Would you like to roll again? If yes, press the 'y' key: ");
         option = input.next();
-        if(option == "y") {
+        if(option.equals("y")) {
             return true;
-        } 
-        return false;
+        }
+        else {
+            return false;
+        }
     }
 
     // display dice numbers and points
