@@ -120,4 +120,11 @@ public class Player {
         } 
         return false;
     }
+
+    // display dice numbers
+    public void displayDiceNumbers(int dice1, int dice2) {
+        System.out.println("Player: " + this.name);
+        System.out.println("Dice 1: " + dice1);
+        System.out.println("Dice 2: " + dice2);
+    }
 }
