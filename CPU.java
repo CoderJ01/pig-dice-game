@@ -5,6 +5,11 @@ public class CPU extends Player {
    }
 
    // force CPU to roll dice again
+   public boolean optionalRoll() {
+    return true;
+   }
+
+   // force CPU to roll dice again
    @Override
    public boolean obligatedRoll() {
     return true;
