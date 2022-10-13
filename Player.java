@@ -48,7 +48,7 @@ public class Player {
     // determine the number of points the player earns
     public int determinePoints(int dice1, int dice2) {
         boolean turnContinues = false;
-        displayDiceNumbers(dice1, dice2); // terminal display
+        displayInfo(dice1, dice2); // terminal display
         
         do {
             // if neither dice is 1, then the sum of the dices values are added to the players points
@@ -122,8 +122,8 @@ public class Player {
         return false;
     }
 
-    // display dice numbers
-    public void displayDiceNumbers(int dice1, int dice2) {
+    // display dice numbers and points
+    public void displayInfo(int dice1, int dice2) {
         System.out.println("Player: " + this.name);
         System.out.println("Dice 1: " + dice1);
         System.out.println("Dice 2: " + dice2);
