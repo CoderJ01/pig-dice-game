@@ -7,9 +7,7 @@ Let's say there are two players playing the game. Player A rolls a 2 and a 3. Pl
 
 Player B rolls two 6’s, so has twelve points (6 + 6 = 12). With luck on his side, Player B rolls two 6’s again, earning him twenty-four points (12 + 6 + 6 = 24). Player B then rolls two 1’s. Player B has now lost all the points he had for the game (24  0), and has to forfeit his turn to Player A.
 
-Therefore, so far...
-Player A has 24 points.
-Player B has 0 points.
+Therefore, so far, Player A has 24 points and Player B has 0 points.
 
 ## Built With
 * Java
