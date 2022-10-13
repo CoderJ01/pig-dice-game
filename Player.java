@@ -60,7 +60,9 @@ public class Player {
                 turnContinues = false;
             }
             // if one die is 1, the player gets no points
-            else if(dice1 == 1 || dice2 == 1) { }
+            else if(dice1 == 1 || dice2 == 1) {
+                turnContinues = false;
+            }
             // if the dices are the same number, the player earns points
             else if(dice1 == dice2) {
                 this.points += (dice1 + dice2);
