@@ -54,12 +54,12 @@ public class Player {
             if(dice1 != 1 && dice2 != 1) {
                 this.points += (dice1 + dice2);
             }
-            // if both dice are 1, then the player loses all his points
+            // if both dice are 1, then the player loses all his points, and his turn ends
             else if(dice1 == 1 && dice2 == 1) {
                 this.points = 0;
                 turnContinues = false;
             }
-            // if one die is 1, the player gets no points
+            // if one die is 1, the player gets no points, and his turn ends
             else if(dice1 == 1 || dice2 == 1) {
                 turnContinues = false;
             }
