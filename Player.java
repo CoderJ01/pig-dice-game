@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Player {
     // primative variables
     private int dice1;
@@ -6,6 +8,7 @@ public class Player {
 
     // non-primative variables
     private String name;
+    private Scanner input = new Scanner(System.in);
 
     // constructor
     public Player(String playerName) {
