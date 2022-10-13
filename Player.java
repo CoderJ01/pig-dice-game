@@ -34,4 +34,14 @@ public class Player {
     public int getPoints() {
         return this.points;
     }    
+
+    // roll first dice
+    public int rollFirstDice() {
+        return rand.nextInt(6) + 1;
+    }
+
+    // roll second dice
+    public int rollSecondDice() {
+        return rand.nextInt(6) + 1;
+    }
 }
