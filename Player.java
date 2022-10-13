@@ -127,5 +127,6 @@ public class Player {
         System.out.println("Player: " + this.name);
         System.out.println("Dice 1: " + dice1);
         System.out.println("Dice 2: " + dice2);
+        System.out.println("Points: " + this.points);
     }
 }
