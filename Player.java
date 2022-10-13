@@ -44,4 +44,24 @@ public class Player {
     public int rollSecondDice() {
         return rand.nextInt(6) + 1;
     }
+
+    // determine the number of points the player earns
+    public int determinePoints(int dice1, int dice2) {
+        // if neither dice is 1, then the sum of the dices values are added to the players points
+        if(dice1 != 1 && dice2 != 1) {
+            this.points += (dice1 + dice2);
+        }
+        // if both dice are 1, then the player loses all his points
+        else if(dice1 == 1 && dice2 == 1) {
+            this.points = 0;
+        }
+        // if one die is 1, the player gets no points
+        else if(dice1 == 1 || dice2 == 1) { }
+        // if the dices are the same number, the player earns points
+        else if(dice1 == dice2) {
+            this.points += (dice1 + dice2);
+        }
+
+        return this.points;
+    }
 }
