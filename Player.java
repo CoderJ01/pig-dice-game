@@ -1,5 +1,5 @@
 public class Player {
-    // variables
+    // primative variables
     private String name;
     private int dice1;
     private int dice2;
@@ -26,6 +26,5 @@ public class Player {
 
     public int getPoints() {
         return this.points;
-    }
-    
+    }    
 }
