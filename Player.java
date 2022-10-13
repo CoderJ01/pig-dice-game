@@ -90,7 +90,7 @@ public class Player {
                 }
             }
 
-        } while (turnContinues == true);
+        } while (turnContinues == true && this.points < 100);
         
         return this.points;
     }

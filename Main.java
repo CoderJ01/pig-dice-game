@@ -6,33 +6,51 @@ public class Main {
         CPU CPU2 = new CPU("CPU_2");
         CPU CPU3 = new CPU("CPU_3");
 
-        // initilize parameters with points
-        int w = joshua.getPoints();
-        int x = CPU1.getPoints();
-        int y = CPU2.getPoints();
-        int z = CPU3.getPoints();
-
         // continue the game while all the players have less than 100 points
-        while(w < 100 && x < 100 && y < 100 && z < 100) {
+        while(joshua.getPoints() < 100 && CPU1.getPoints() < 100 && CPU2.getPoints() < 100 && CPU3.getPoints() < 100) {
             // playable character
             int a = joshua.rollFirstDice();
             int b = joshua.rollSecondDice();
             joshua.determinePoints(a, b);
+            joshua.getPoints();
+            System.out.println("getPoints(): " + joshua.getPoints());
+
+            if(joshua.getPoints() >= 100) {
+                break;
+            }
 
             // CPU 1
             int c = CPU1.rollFirstDice();
             int d = CPU1.rollSecondDice();
             CPU1.determinePoints(c, d);
+            CPU1.getPoints();
+            System.out.println("getPoints(): " + CPU1.getPoints());
+
+            if(CPU1.getPoints() >= 100) {
+                break;
+            }
 
             // CPU 2
             int e = CPU2.rollFirstDice();
             int f = CPU2.rollSecondDice();
             CPU2.determinePoints(e, f);
+            CPU2.getPoints();
+            System.out.println("getPoints(): " + CPU2.getPoints());
+
+            if(CPU2.getPoints() >= 100) {
+                break;
+            }
 
             // CPU 3
             int g = CPU3.rollFirstDice();
             int h = CPU3.rollSecondDice();
             CPU1.determinePoints(g, h);
+            CPU3.getPoints();
+            System.out.println("getPoints(): " + joshua.getPoints());
+
+            if(CPU3.getPoints() >= 100) {
+                break;
+            }
         }
     }
 }
