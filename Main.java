@@ -11,8 +11,6 @@ public class Main {
             // playable character
             int a = joshua.rollFirstDice();
             int b = joshua.rollSecondDice();
-            a = 5;
-            b = 5;
             joshua.determinePoints(a, b);
             joshua.getPoints();
 
