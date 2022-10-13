@@ -48,12 +48,12 @@ public class Player {
     // determine the number of points the player earns
     public int determinePoints(int dice1, int dice2) {
         boolean turnContinues = false;
-        displayInfo(dice1, dice2); // terminal display
         
         do {
             // if neither dice is 1, then the sum of the dices values are added to the players points
             if(dice1 != 1 && dice2 != 1) {
                 this.points += (dice1 + dice2);
+                displayInfo(dice1, dice2); // terminal display
                 if(optionalRoll() == true) {
                     turnContinues = true;
                     int x = rollFirstDice();
@@ -68,15 +68,18 @@ public class Player {
             // if both dice are 1, then the player loses all his points, and his turn ends
             else if(dice1 == 1 && dice2 == 1) {
                 this.points = 0;
+                displayInfo(dice1, dice2); // terminal display
                 turnContinues = false;
             }
             // if one die is 1, the player gets no points, and his turn ends
             else if(dice1 == 1 || dice2 == 1) {
+                displayInfo(dice1, dice2); // terminal display
                 turnContinues = false;
             }
             // if the dices are the same number, the player earns points, and the player is obligated to roll again
             else if(dice1 == dice2) {
                 this.points += (dice1 + dice2);
+                displayInfo(dice1, dice2); // terminal display
                 // obligated roll will always be true
                 if(obligatedRoll() == true) {
                     turnContinues = true;

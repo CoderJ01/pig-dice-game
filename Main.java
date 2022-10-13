@@ -4,5 +4,7 @@ public class Main {
         int a = joshua.rollFirstDice();
         int b = joshua.rollSecondDice();
         System.out.println(a + " " + b);
+
+        joshua.determinePoints(a, b);
     }
 }
