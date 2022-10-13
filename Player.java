@@ -48,7 +48,8 @@ public class Player {
     // determine the number of points the player earns
     public int determinePoints(int dice1, int dice2) {
         boolean turnContinues = false;
-
+        displayDiceNumbers(dice1, dice2); // terminal display
+        
         do {
             // if neither dice is 1, then the sum of the dices values are added to the players points
             if(dice1 != 1 && dice2 != 1) {
