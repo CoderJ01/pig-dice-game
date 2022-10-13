@@ -10,6 +10,7 @@ public class CPU extends Player {
    @Override
    public boolean optionalRoll() {
     try {
+        // delay each output by three seconds
         TimeUnit.SECONDS.sleep(3);
     }
     catch(InterruptedException e) {
@@ -22,6 +23,7 @@ public class CPU extends Player {
    @Override
    public boolean obligatedRoll() {
     try {
+        // delay each output by three seconds
         TimeUnit.SECONDS.sleep(3);
     }
     catch(InterruptedException e) {
