@@ -1,9 +1,11 @@
 public class Player {
     // primative variables
-    private String name;
     private int dice1;
     private int dice2;
     private int points;
+
+    // non-primative variables
+    private String name;
 
     // constructor
     public Player(String playerName) {
