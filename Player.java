@@ -119,11 +119,11 @@ public class Player {
         String option = "";
         System.out.print("Would you like to roll again? If yes, press the 'y' key: ");
         option = input.next();
-        if(option.equals("y")) {
-            return true;
+        if(!option.equals("y")) {
+            return false;
         }
         else {
-            return false;
+            return true;
         }
     }
 
