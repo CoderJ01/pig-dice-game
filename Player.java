@@ -66,6 +66,7 @@ public class Player {
             // if the dices are the same number, the player earns points, and the player is obligated to roll again
             else if(dice1 == dice2) {
                 this.points += (dice1 + dice2);
+                // obligated roll will always be true
                 if(obligatedRoll() == true) {
                     turnContinues = true;
                     int x = rollFirstDice();
