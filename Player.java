@@ -53,6 +53,16 @@ public class Player {
             // if neither dice is 1, then the sum of the dices values are added to the players points
             if(dice1 != 1 && dice2 != 1) {
                 this.points += (dice1 + dice2);
+                if(optionalRoll() == true) {
+                    turnContinues = true;
+                    int x = rollFirstDice();
+                    int y = rollSecondDice();
+                    // recursion
+                    determinePoints(x, y);
+                }
+                else {
+                    turnContinues = false;
+                }
             }
             // if both dice are 1, then the player loses all his points, and his turn ends
             else if(dice1 == 1 && dice2 == 1) {
@@ -89,7 +99,7 @@ public class Player {
         while(!turnContinues) {
             System.out.print("You must roll again. Press 'r' key to roll dice: ");
             obligated = input.next();
-            if(!obligated.equals("r")) {
+            if(obligated != "r") {
                 turnContinues = false;
             }
             else {
@@ -98,5 +108,16 @@ public class Player {
             }
         }
         return turnContinues;
+    }
+
+    // provide user the option to roll dice again
+    public boolean optionalRoll() {
+        String option = "";
+        System.out.print("Would you like to roll again? If yes, press the 'y' key: ");
+        option = input.next();
+        if(option == "y") {
+            return true;
+        } 
+        return false;
     }
 }
