@@ -9,6 +9,8 @@ Player B rolls two 6’s, so has twelve points (6 + 6 = 12). With luck on his si
 
 Therefore, so far, Player A has 24 points and Player B has 0 points.
 
+(NOTE: Upon landing on this page from my [portfolio](https://coderj01.github.io/coding-portfolio-website/), one will notice that I have two pieces called "Pig". This is the second attempt at creating the code for the dice game via Java (OOP). The first attempt ([codebase](https://github.com/CoderJ01/pig/blob/main/assets/plain_text/codebase.txt)), created originally in early 2020, is based on C/C++.)
+
 ## Built With
 * Java
 
