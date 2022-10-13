@@ -8,6 +8,7 @@ public class Player {
     // constructor
     public Player(String playerName) {
         this.name = playerName;
+        this.points = 0;
     }
 
     // getters
