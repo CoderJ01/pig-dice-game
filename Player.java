@@ -129,7 +129,7 @@ public class Player {
 
     // display dice numbers and points
     public void displayInfo(int dice1, int dice2) {
-        System.out.println("Player: " + this.name);
+        System.out.println("\nPlayer: " + this.name);
         System.out.println("Dice 1: " + dice1);
         System.out.println("Dice 2: " + dice2);
         System.out.println("Points: " + this.points);
