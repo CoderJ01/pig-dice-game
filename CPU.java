@@ -11,7 +11,7 @@ public class CPU extends Player {
    public boolean optionalRoll() {
     try {
         // delay each output by three seconds
-        TimeUnit.SECONDS.sleep(2);
+        TimeUnit.SECONDS.sleep(1);
     }
     catch(InterruptedException e) {
         System.out.println("Error");
@@ -24,7 +24,7 @@ public class CPU extends Player {
    public boolean obligatedRoll() {
     try {
         // delay each output by three seconds
-        TimeUnit.SECONDS.sleep(2);
+        TimeUnit.SECONDS.sleep(1);
     }
     catch(InterruptedException e) {
         System.out.println("Error");
