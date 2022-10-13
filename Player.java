@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Player {
@@ -9,6 +10,7 @@ public class Player {
     // non-primative variables
     private String name;
     private Scanner input = new Scanner(System.in);
+    private Random rand = new Random();
 
     // constructor
     public Player(String playerName) {
