@@ -57,6 +57,7 @@ public class Player {
             // if both dice are 1, then the player loses all his points
             else if(dice1 == 1 && dice2 == 1) {
                 this.points = 0;
+                turnContinues = false;
             }
             // if one die is 1, the player gets no points
             else if(dice1 == 1 || dice2 == 1) { }
