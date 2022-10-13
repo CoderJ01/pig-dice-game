@@ -51,7 +51,7 @@ public class Player {
         
         do {
             // if neither dice is 1, then the sum of the dices values are added to the players points
-            if(dice1 != 1 && dice2 != 1) {
+            if(dice1 != 1 && dice2 != 1 && (dice1 != dice2)) {
                 this.points += (dice1 + dice2);
                 displayInfo(dice1, dice2); // terminal display
                 if(optionalRoll() == true) {
@@ -81,7 +81,7 @@ public class Player {
                 this.points += (dice1 + dice2);
                 displayInfo(dice1, dice2); // terminal display
                 // obligated roll will always be true
-                if(obligatedRoll() == true) {
+                if(obligatedRoll()) {
                     turnContinues = true;
                     int x = rollFirstDice();
                     int y = rollSecondDice();
