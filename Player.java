@@ -63,13 +63,33 @@ public class Player {
             else if(dice1 == 1 || dice2 == 1) {
                 turnContinues = false;
             }
-            // if the dices are the same number, the player earns points
+            // if the dices are the same number, the player earns points, and the player is obligated to roll again
             else if(dice1 == dice2) {
                 this.points += (dice1 + dice2);
+                turnContinues = true;
             }
 
         } while (turnContinues == true);
         
         return this.points;
+    }
+
+    // force the player to roll the dice again
+    public boolean obligatedRoll() {
+        boolean turnContinues = false;
+        String obligated = "";
+
+        while(!turnContinues) {
+            System.out.print("You must roll again. Press 'r' key to roll dice: ");
+            obligated = input.next();
+            if(!obligated.equals("r")) {
+                turnContinues = false;
+            }
+            else {
+                turnContinues = true;
+                break;
+            }
+        }
+        return turnContinues;
     }
 }
