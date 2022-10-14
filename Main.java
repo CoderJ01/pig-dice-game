@@ -3,6 +3,7 @@ import java.util.List;
 
 public class Main {
 
+    // array of players
     private static List<Player> players = new ArrayList<>();
     public static void main(String[] args) {
         // players
@@ -11,6 +12,7 @@ public class Main {
         CPU CPU2 = new CPU("CPU_2");
         CPU CPU3 = new CPU("CPU_3");
 
+        // add players to list
         players.add(joshua);
         players.add(CPU1);
         players.add(CPU2);
