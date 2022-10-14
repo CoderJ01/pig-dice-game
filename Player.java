@@ -49,7 +49,7 @@ public class Player {
     // determine the number of points the player earns
     public int determinePoints(int dice1, int dice2) {
 
-        while(turnContinues == true && this.points < 100) {
+        while(this.turnContinues == true && this.points < 100) {
             // if neither dice is 1, then the sum of the dices values are added to the players points
             if(dice1 != 1 && dice2 != 1 && (dice1 != dice2)) {
                 this.points += (dice1 + dice2);
@@ -98,21 +98,21 @@ public class Player {
 
     // force the player to roll the dice again
     public boolean obligatedRoll() {
-        boolean turnContinues = false;
+        this.turnContinues = false;
         String obligated = "";
 
-        while(!turnContinues) {
+        while(!this.turnContinues) {
             System.out.print("You must roll again. Press 'r' key to roll dice: ");
             obligated = input.next();
             if(!obligated.equals("r")) {
-                turnContinues = false;
+                this.turnContinues = false;
             }
             else {
-                turnContinues = true;
+                this.turnContinues = true;
                 break;
             }
         }
-        return turnContinues;
+        return this.turnContinues;
     }
 
     // provide user the option to roll dice again
