@@ -84,7 +84,7 @@ public class Player {
                 displayInfo(dice1, dice2); // terminal display
                 // obligated roll will always be true
                 if(obligatedRoll()) {
-                    turnContinues = true;
+                    this.turnContinues = true;
                     int x = rollFirstDice();
                     int y = rollSecondDice();
                     // recursion
