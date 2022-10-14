@@ -70,7 +70,7 @@ public class Main {
         System.out.println("\nPOINTS");
         System.out.println("******");
         for (Player player : players) {
-            System.out.println("Player " + i + " | " + player.getName() + ": " + player.getPoints() + " points");
+            System.out.println("Player " + i + ": " + player.getName() + " | " + player.getPoints() + " points");
             i++;
         }
     }
