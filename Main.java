@@ -1,10 +1,20 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
+
+    private static List<Player> players = new ArrayList<>();
     public static void main(String[] args) {
         // players
         Player joshua = new Player("Joshua");
         CPU CPU1 = new CPU("CPU_1");
         CPU CPU2 = new CPU("CPU_2");
         CPU CPU3 = new CPU("CPU_3");
+
+        players.add(joshua);
+        players.add(CPU1);
+        players.add(CPU2);
+        players.add(CPU3);
 
         // continue the game while all the players have less than 100 points
         while(joshua.getPoints() < 100 && CPU1.getPoints() < 100 && CPU2.getPoints() < 100 && CPU3.getPoints() < 100) {
@@ -49,11 +59,16 @@ public class Main {
             }
         }
 
+        listPlayers();
+    }
+
+    private static void listPlayers() {
+        int i = 1;
         System.out.println("\nPOINTS");
         System.out.println("******");
-        System.out.println("Player 1: " + joshua.getName() + " | " + joshua.getPoints());
-        System.out.println("Player 2: " + CPU1.getName() + " | " + CPU1.getPoints());
-        System.out.println("Player 3: " + CPU2.getName() + " | " + CPU2.getPoints());
-        System.out.println("Player 4: " + CPU3.getName() + " | " + CPU3.getPoints());
+        for (Player player : players) {
+            System.out.println("Player " + i + " | " + player.getName() + ": " + player.getPoints() + " points");
+            i++;
+        }
     }
 }
