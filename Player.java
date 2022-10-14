@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Player {
+public class Player implements Comparable<Player>{
     // primative variables
     private int dice1;
     private int dice2;
@@ -134,5 +134,10 @@ public class Player {
         System.out.println("Dice 1: " + dice1);
         System.out.println("Dice 2: " + dice2);
         System.out.println("Points: " + this.points);
+    }
+
+    // sort players by the number of points they have
+    public int compareTo(Player rankPlayer) {
+        return this.points - rankPlayer.points;
     }
 }
