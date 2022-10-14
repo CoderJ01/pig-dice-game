@@ -41,7 +41,7 @@ public class Main {
             // CPU 3
             int g = CPU3.rollFirstDice();
             int h = CPU3.rollSecondDice();
-            CPU1.determinePoints(g, h);
+            CPU3.determinePoints(g, h);
             CPU3.getPoints();
 
             if(CPU3.getPoints() >= 100) {

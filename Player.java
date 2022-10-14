@@ -6,6 +6,7 @@ public class Player {
     private int dice1;
     private int dice2;
     private int points;
+    private boolean turnContinues = true;
 
     // non-primative variables
     private String name;
@@ -47,7 +48,6 @@ public class Player {
 
     // determine the number of points the player earns
     public int determinePoints(int dice1, int dice2) {
-        boolean turnContinues = true;
 
         while(turnContinues == true && this.points < 100) {
             // if neither dice is 1, then the sum of the dices values are added to the players points
@@ -55,27 +55,27 @@ public class Player {
                 this.points += (dice1 + dice2);
                 displayInfo(dice1, dice2); // terminal display
                 if(optionalRoll() == true) {
-                    turnContinues = true;
+                    this.turnContinues = true;
                     int x = rollFirstDice();
                     int y = rollSecondDice();
                     // recursion
                     determinePoints(x, y);
                 }
                 else {
-                    turnContinues = false;
+                    this.turnContinues = false;
                 }
             }
             // if both dice are 1, then the player loses all his points, and his turn ends
             else if(dice1 == 1 && dice2 == 1) {
                 this.points = 0;
                 displayInfo(dice1, dice2); // terminal display
-                turnContinues = false;
+                this.turnContinues = false;
                 break;
             }
             // if one die is 1, the player gets no points, and his turn ends
             else if(dice1 == 1 || dice2 == 1) {
                 displayInfo(dice1, dice2); // terminal display
-                turnContinues = false;
+                this.turnContinues = false;
                 break;
             }
             // if the dices are the same number, the player earns points, and the player is obligated to roll again
