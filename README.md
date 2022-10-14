@@ -9,7 +9,7 @@ Player B rolls two 6’s, so has twelve points (6 + 6 = 12). With luck on his si
 
 Therefore, so far, Player A has 24 points and Player B has 0 points.
 
-If a player rolls two dice of the same number, and the dice are neither 1, then the player is obligated to roll the dice again. However, if the player rolls two different numbers that are neither 1, then they player change choose to either roll again or skip the turn. For example, if Player A rolls a 3 and a 3, then Player A must roll the dice again (he is not permitted to skip the turn). Alternatively, if Player A rolls a 4 and a 5, then Player A may either roll again or skip the turn.
+If a player rolls two dice of the same number, and the dice are neither 1, then the player is obligated to roll the dice again. However, if the player rolls two different numbers that are neither 1, then they player may choose to either roll again or skip the turn. For example, if Player A rolls a 3 and a 3, then Player A must roll the dice again (he is not permitted to skip the turn). Alternatively, if Player A rolls a 4 and a 5, then Player A may either roll again or skip the turn.
 
 (NOTE: Upon landing on this page from my [portfolio](https://coderj01.github.io/coding-portfolio-website/), one will notice that I have two pieces called "Pig". This is the second attempt at creating the code for the dice game via Java (OOP). The first attempt ([codebase](https://github.com/CoderJ01/pig/blob/main/assets/plain_text/codebase.txt)), created originally in early 2020, is based on C/C++.)
 
