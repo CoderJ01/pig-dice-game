@@ -5,7 +5,7 @@ This is a dice game that can be played with either a single die or two dice. The
 
 Let's say there are two players playing the game. Player A rolls a 2 and a 3. Player A earns five points (2 + 3 = 5). Player A then rolls two 6’s. Player A now has seventeen points (5 + 6 + 6 = 17). Player A then rolls a 5 and a 2. Player A now has twenty-four points (17 + 5 + 2 = 24). Player A then rolls a 1 and a 6. Player A has earned zero points for that round (24 + 0 = 24), and has to forfeit his turn to Player B. 
 
-Player B rolls two 6’s, so has twelve points (6 + 6 = 12). With luck on his side, Player B rolls two 6’s again, earning him twenty-four points (12 + 6 + 6 = 24). Player B then rolls two 1’s. Player B has now lost all the points he had for the game (24  0), and has to forfeit his turn to Player A.
+Player B rolls two 6’s, so has twelve points (6 + 6 = 12). With luck on his side, Player B rolls two 6’s again, earning him twenty-four points (12 + 6 + 6 = 24). Player B then rolls two 1’s. Player B has now lost all the points he had for the game, and has to forfeit his turn to Player A.
 
 Therefore, so far, Player A has 24 points and Player B has 0 points.
 
