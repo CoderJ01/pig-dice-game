@@ -138,6 +138,6 @@ public class Player implements Comparable<Player>{
 
     // sort players by the number of points they have
     public int compareTo(Player rankPlayer) {
-        return this.points - rankPlayer.points;
+        return rankPlayer.points - this.points;
     }
 }

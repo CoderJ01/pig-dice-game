@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -62,6 +63,7 @@ public class Main {
         }
 
         listPlayers();
+        rankPlayers();
     }
 
     // list the number of points each player has at the end of the game
@@ -71,6 +73,21 @@ public class Main {
         System.out.println("******");
         for (Player player : players) {
             System.out.println("Player " + i + ": " + player.getName() + " | " + player.getPoints() + " points");
+            i++;
+        }
+    }
+
+    // rank players
+    private static void rankPlayers() {
+        // use collections
+        Collections.sort(players);
+
+        // print out ranks
+        System.out.println("\nRANKS");
+        System.out.println("*****");
+        int i = 1;
+        for(Player player : players) {
+            System.out.println(i + ". " + player.getName() + " | " + player.getPoints());
             i++;
         }
     }
