@@ -64,6 +64,7 @@ public class Main {
         listPlayers();
     }
 
+    // list the number of points each player has at the end of the game
     private static void listPlayers() {
         int i = 1;
         System.out.println("\nPOINTS");
