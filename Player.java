@@ -47,9 +47,9 @@ public class Player {
 
     // determine the number of points the player earns
     public int determinePoints(int dice1, int dice2) {
-        boolean turnContinues = false;
-        
-        do {
+        boolean turnContinues = true;
+
+        while(turnContinues == true && this.points < 100) {
             // if neither dice is 1, then the sum of the dices values are added to the players points
             if(dice1 != 1 && dice2 != 1 && (dice1 != dice2)) {
                 this.points += (dice1 + dice2);
@@ -70,11 +70,13 @@ public class Player {
                 this.points = 0;
                 displayInfo(dice1, dice2); // terminal display
                 turnContinues = false;
+                break;
             }
             // if one die is 1, the player gets no points, and his turn ends
             else if(dice1 == 1 || dice2 == 1) {
                 displayInfo(dice1, dice2); // terminal display
                 turnContinues = false;
+                break;
             }
             // if the dices are the same number, the player earns points, and the player is obligated to roll again
             else if(dice1 == dice2) {
@@ -89,8 +91,7 @@ public class Player {
                     determinePoints(x, y);
                 }
             }
-
-        } while (turnContinues == true && this.points < 100);
+        }
         
         return this.points;
     }
