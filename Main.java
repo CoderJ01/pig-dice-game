@@ -57,6 +57,7 @@ public class Main {
         }
     }
 
+    // continue the game while all of the players have less than 100 points
     private static boolean gameOver() {
         for(int i = 0; i < players.size(); i++) {
             if(players.get(i).getPoints() < 100) {
