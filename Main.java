@@ -20,6 +20,7 @@ public class Main {
                 players.get(i).determinePoints(players.get(i).rollFirstDice(), players.get(i).rollSecondDice());
                 players.get(i).getPoints();
 
+                // as soon as one of the players gets 100 points, end the game
                 if(players.get(i).getPoints() >= 100) {
                     break;
                 }
