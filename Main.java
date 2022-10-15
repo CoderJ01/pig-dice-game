@@ -14,6 +14,8 @@ public class Main {
         players.add(new CPU("CPU_1"));
         players.add(new CPU("CPU_2"));
         players.add(new CPU("CPU_3"));
+        players.add(new CPU("CPU_4"));
+        players.add(new CPU("CPU_5"));
 
         // continue the game while all the players have less than 100 points
         int i = 0;
