@@ -6,6 +6,7 @@ public class Main {
 
     // array of players
     private static List<Player> players = new ArrayList<>();
+    private static boolean gameOver = false;
     public static void main(String[] args) {
 
         // add players to list
@@ -15,15 +16,23 @@ public class Main {
         players.add(new CPU("CPU_3"));
 
         // continue the game while all the players have less than 100 points
-        while(gameOver() == false) {
-            for(int i = 0; i < players.size(); i++) {
-                players.get(i).determinePoints(players.get(i).rollFirstDice(), players.get(i).rollSecondDice());
-                players.get(i).getPoints();
+        int i = 0;
+        while(true) {
+            // for(int i = 0; i < players.size(); i++) {
+            players.get(i).determinePoints(players.get(i).rollFirstDice(), players.get(i).rollSecondDice());
+            players.get(i).getPoints();
 
-                // as soon as one of the players gets 100 points, end the game
-                if(players.get(i).getPoints() >= 100) {
-                    break;
-                }
+            // as soon as one of the players gets 100 points, end the game
+            if(players.get(i).getPoints() >= 100) {
+                break;
+            }
+
+            // loop only after break condition is checked
+            if(i < (players.size() - 1)) {
+                i++;
+            }
+            else {
+                i = 0;
             }
         }
            
@@ -58,12 +67,12 @@ public class Main {
     }
 
     // continue the game while all of the players have less than 100 points
-    private static boolean gameOver() {
-        for(int i = 0; i < players.size(); i++) {
-            if(players.get(i).getPoints() < 100) {
-                return false;
-            }
-        }
-        return true;
-    }
+    // private static boolean gameOver() {
+    //     for(int i = 0; i < players.size(); i++) {
+    //         if(players.get(i).getPoints() < 100) {
+    //             return false;
+    //         }
+    //     }
+    //     return true;
+    // }
 }
