@@ -7,60 +7,58 @@ public class Main {
     // array of players
     private static List<Player> players = new ArrayList<>();
     public static void main(String[] args) {
-        // players
-        Player player1 = new Player("Joshua");
-        CPU player2 = new CPU("CPU_1");
-        CPU player3 = new CPU("CPU_2");
-        CPU player4 = new CPU("CPU_3");
 
         // add players to list
-        players.add(player1);
-        players.add(player2);
-        players.add(player3);
-        players.add(player4);
+        players.add(new Player("Joshua"));
+        players.add(new CPU("CPU_1"));
+        players.add(new CPU("CPU_2"));
+        players.add(new CPU("CPU_3"));
 
         // continue the game while all the players have less than 100 points
-        while(player1.getPoints() < 100 && player2.getPoints() < 100 && player3.getPoints() < 100 && player4.getPoints() < 100) {
+        // while(player1.getPoints() < 100 && player2.getPoints() < 100 && player3.getPoints() < 100 && player4.getPoints() < 100) {
             // playable character
-            int a = player1.rollFirstDice();
-            int b = player1.rollSecondDice();
-            player1.determinePoints(a, b);
-            player1.getPoints();
+            while(gameOver() == false) {
+                for(int i = 0; i < players.size(); i++) {
+                    players.get(i).determinePoints(players.get(i).rollFirstDice(), players.get(i).rollSecondDice());
+                    players.get(i).getPoints();
 
-            if(player1.getPoints() >= 100) {
-                break;
+                    if(players.get(i).getPoints() >= 100) {
+                        break;
+                    }
+                }
             }
+           
 
-            // CPU 1
-            int c = player2.rollFirstDice();
-            int d = player2.rollSecondDice();
-            player2.determinePoints(c, d);
-            player2.getPoints();
+            // // CPU 1
+            // int c = player2.rollFirstDice();
+            // int d = player2.rollSecondDice();
+            // player2.determinePoints(c, d);
+            // player2.getPoints();
 
-            if(player2.getPoints() >= 100) {
-                break;
-            }
+            // if(player2.getPoints() >= 100) {
+            //     break;
+            // }
 
-            // CPU 2
-            int e = player3.rollFirstDice();
-            int f = player3.rollSecondDice();
-            player3.determinePoints(e, f);
-            player3.getPoints();
+            // // CPU 2
+            // int e = player3.rollFirstDice();
+            // int f = player3.rollSecondDice();
+            // player3.determinePoints(e, f);
+            // player3.getPoints();
 
-            if(player3.getPoints() >= 100) {
-                break;
-            }
+            // if(player3.getPoints() >= 100) {
+            //     break;
+            // }
 
-            // CPU 3
-            int g = player4.rollFirstDice();
-            int h = player4.rollSecondDice();
-            player4.determinePoints(g, h);
-            player4.getPoints();
+            // // CPU 3
+            // int g = player4.rollFirstDice();
+            // int h = player4.rollSecondDice();
+            // player4.determinePoints(g, h);
+            // player4.getPoints();
 
-            if(player4.getPoints() >= 100) {
-                break;
-            }
-        }
+            // if(player4.getPoints() >= 100) {
+            //     break;
+            // }
+        // }
 
         listPlayers();
         rankPlayers();
@@ -90,5 +88,14 @@ public class Main {
             System.out.println(i + ". " + player.getName());
             i++;
         }
+    }
+
+    private static boolean gameOver() {
+        for(int i = 0; i < players.size(); i++) {
+            if(players.get(i).getPoints() < 100) {
+                return false;
+            }
+        }
+        return true;
     }
 }
