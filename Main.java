@@ -48,7 +48,7 @@ public class Main {
         System.out.println("\nPOINTS");
         System.out.println("******");
         for (Player player : players) {
-            System.out.println("Player " + i + " (" + player.getName() + ") has " + player.getPoints() + " points");
+            System.out.println("Player " + i + " (" + player.getName() + ") scored a total of " + player.getPoints() + " points");
             i++;
         }
     }
