@@ -15,51 +15,17 @@ public class Main {
         players.add(new CPU("CPU_3"));
 
         // continue the game while all the players have less than 100 points
-        // while(player1.getPoints() < 100 && player2.getPoints() < 100 && player3.getPoints() < 100 && player4.getPoints() < 100) {
-            // playable character
-            while(gameOver() == false) {
-                for(int i = 0; i < players.size(); i++) {
-                    players.get(i).determinePoints(players.get(i).rollFirstDice(), players.get(i).rollSecondDice());
-                    players.get(i).getPoints();
+        while(gameOver() == false) {
+            for(int i = 0; i < players.size(); i++) {
+                players.get(i).determinePoints(players.get(i).rollFirstDice(), players.get(i).rollSecondDice());
+                players.get(i).getPoints();
 
-                    if(players.get(i).getPoints() >= 100) {
-                        break;
-                    }
+                if(players.get(i).getPoints() >= 100) {
+                    break;
                 }
             }
+        }
            
-
-            // // CPU 1
-            // int c = player2.rollFirstDice();
-            // int d = player2.rollSecondDice();
-            // player2.determinePoints(c, d);
-            // player2.getPoints();
-
-            // if(player2.getPoints() >= 100) {
-            //     break;
-            // }
-
-            // // CPU 2
-            // int e = player3.rollFirstDice();
-            // int f = player3.rollSecondDice();
-            // player3.determinePoints(e, f);
-            // player3.getPoints();
-
-            // if(player3.getPoints() >= 100) {
-            //     break;
-            // }
-
-            // // CPU 3
-            // int g = player4.rollFirstDice();
-            // int h = player4.rollSecondDice();
-            // player4.determinePoints(g, h);
-            // player4.getPoints();
-
-            // if(player4.getPoints() >= 100) {
-            //     break;
-            // }
-        // }
-
         listPlayers();
         rankPlayers();
     }
