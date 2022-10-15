@@ -78,7 +78,7 @@ public class Player implements Comparable<Player>{
                 displayInfo(dice1, dice2); // terminal display
                 this.turnContinues = false;
             }
-            // if the dices are the same number, the player earns points, and the player is obligated to roll again
+            // if the dice are the same number, the player earns points, and the player is obligated to roll again
             else if(dice1 == dice2) {
                 this.points += (dice1 + dice2);
                 displayInfo(dice1, dice2); // terminal display
