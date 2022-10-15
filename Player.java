@@ -52,7 +52,7 @@ public class Player implements Comparable<Player>{
         this.turnContinues = true;
 
         while(this.turnContinues == true && this.points < 100) {
-            // if neither dice is 1, then the sum of the dices values are added to the players points
+            // if neither dice is 1 nor the same number, then the sum of the dices values are added to the players points
             if(dice1 != 1 && dice2 != 1 && (dice1 != dice2)) {
                 this.points += (dice1 + dice2);
                 displayInfo(dice1, dice2); // terminal display
