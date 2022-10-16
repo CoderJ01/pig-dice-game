@@ -2,13 +2,13 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Player implements Comparable<Player>{
-    // primative variables
+    // primitive variables
     private int die1;
     private int die2;
     private int points;
     private boolean turnContinues = true;
 
-    // non-primative variables
+    // non-primitive variables
     private String name;
     private Scanner input = new Scanner(System.in);
     private Random rand = new Random();
