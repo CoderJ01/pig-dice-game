@@ -21,7 +21,7 @@ public class Main {
         int i = 0;
         while(true) {
             // loop through players (turns)
-            players.get(i).determinePoints(players.get(i).rollFirstDice(), players.get(i).rollSecondDice());
+            players.get(i).determinePoints(players.get(i).rollFirstDie(), players.get(i).rollSecondDie());
             players.get(i).getPoints();
 
             // as soon as one of the players has a total of 100 points, end the game

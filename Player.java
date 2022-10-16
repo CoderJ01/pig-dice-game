@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Player implements Comparable<Player>{
     // primative variables
-    private int dice1;
-    private int dice2;
+    private int die1;
+    private int die2;
     private int points;
     private boolean turnContinues = true;
 
@@ -25,11 +25,11 @@ public class Player implements Comparable<Player>{
     }
 
     public int getFirstDieNumber() {
-        return this.dice1;
+        return this.die1;
     }
 
     public int getSecondDieNumber() {
-        return this.dice2;
+        return this.die2;
     }
 
     public int getPoints() {
@@ -37,29 +37,29 @@ public class Player implements Comparable<Player>{
     }    
 
     // roll first dice
-    public int rollFirstDice() {
+    public int rollFirstDie() {
         return rand.nextInt(6) + 1;
     }
 
     // roll second dice
-    public int rollSecondDice() {
+    public int rollSecondDie() {
         return rand.nextInt(6) + 1;
     }
 
     // determine the number of points the player earns
-    public int determinePoints(int dice1, int dice2) {
+    public int determinePoints(int die1, int die2) {
 
         this.turnContinues = true;
 
         while(this.turnContinues == true && this.points < 100) {
             // if neither dice is 1 nor the same number, then the sum of the dices values are added to the players points
-            if(dice1 != 1 && dice2 != 1 && (dice1 != dice2)) {
-                this.points += (dice1 + dice2);
-                displayInfo(dice1, dice2); // terminal display
+            if(die1 != 1 && die2 != 1 && (die1 != die2)) {
+                this.points += (die1 + die2);
+                displayInfo(die1, die2); // terminal display
                 if(optionalRoll() == true) {
                     this.turnContinues = true;
-                    int x = rollFirstDice();
-                    int y = rollSecondDice();
+                    int x = rollFirstDie();
+                    int y = rollSecondDie();
                     // recursion
                     determinePoints(x, y);
                 }
@@ -68,25 +68,25 @@ public class Player implements Comparable<Player>{
                 }
             }
             // if both dice are 1, then the player loses all his points, and his turn ends
-            else if(dice1 == 1 && dice2 == 1) {
+            else if(die1 == 1 && die2 == 1) {
                 this.points = 0;
-                displayInfo(dice1, dice2); // terminal display
+                displayInfo(die1, die2); // terminal display
                 this.turnContinues = false;
             }
             // if one die is 1, the player gets no points, and his turn ends
-            else if(dice1 == 1 || dice2 == 1) {
-                displayInfo(dice1, dice2); // terminal display
+            else if(die1 == 1 || die2 == 1) {
+                displayInfo(die1, die2); // terminal display
                 this.turnContinues = false;
             }
             // if the dice are the same number, the player earns points, and the player is obligated to roll again
-            else if(dice1 == dice2) {
-                this.points += (dice1 + dice2);
-                displayInfo(dice1, dice2); // terminal display
+            else if(die1 == die2) {
+                this.points += (die1 + die2);
+                displayInfo(die1, die2); // terminal display
                 // obligated roll will always be true
                 if(obligatedRoll()) {
                     this.turnContinues = true;
-                    int x = rollFirstDice();
-                    int y = rollSecondDice();
+                    int x = rollFirstDie();
+                    int y = rollSecondDie();
                     // recursion
                     determinePoints(x, y);
                 }
@@ -131,8 +131,8 @@ public class Player implements Comparable<Player>{
     // display dice numbers and points
     public void displayInfo(int dice1, int dice2) {
         System.out.println("\nPlayer: " + this.name);
-        System.out.println("Dice 1: " + dice1);
-        System.out.println("Dice 2: " + dice2);
+        System.out.println("Die 1: " + dice1);
+        System.out.println("Die 2: " + dice2);
         System.out.println("Points: " + this.points);
     }
 
