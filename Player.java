@@ -129,10 +129,10 @@ public class Player implements Comparable<Player>{
     }
 
     // display dice numbers and points
-    public void displayInfo(int dice1, int dice2) {
+    public void displayInfo(int die1, int die2) {
         System.out.println("\nPlayer: " + this.name);
-        System.out.println("Die 1: " + dice1);
-        System.out.println("Die 2: " + dice2);
+        System.out.println("Die 1: " + die1);
+        System.out.println("Die 2: " + die2);
         System.out.println("Points: " + this.points);
     }
 
