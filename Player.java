@@ -102,7 +102,7 @@ public class Player implements Comparable<Player>{
         String obligated = "";
 
         while(!this.turnContinues) {
-            System.out.print("You must roll again. Press 'r' key to roll dice: ");
+            System.out.print("You must roll again. Press the 'r' key to roll dice: ");
             obligated = input.next();
             if(!obligated.equals("r")) {
                 this.turnContinues = false;
