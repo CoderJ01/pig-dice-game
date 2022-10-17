@@ -19,7 +19,7 @@ public class Main {
 
         int i = 0;
         int x = 0, y = 0;
-         // loop through players (turns)
+        // loop through players (turns)
         while(true) {
             // have player roll dice
             x = players.get(i).rollFirstDie();
