@@ -17,11 +17,16 @@ public class Main {
         players.add(new CPU("CPU_4"));
         players.add(new CPU("CPU_5"));
 
-        // continue the game while all the players have less than 100 points
         int i = 0;
+        int x = 0, y = 0;
+         // loop through players (turns)
         while(true) {
-            // loop through players (turns)
-            players.get(i).determinePoints(players.get(i).rollFirstDie(), players.get(i).rollSecondDie());
+            // have player roll dice
+            x = players.get(i).rollFirstDie();
+            y = players.get(i).rollSecondDie();
+
+            // determine points player gets after roll
+            players.get(i).determinePoints(x, y);
             players.get(i).getPoints();
 
             // as soon as one of the players has a total of 100 points, end the game

@@ -3,8 +3,6 @@ import java.util.Scanner;
 
 public class Player implements Comparable<Player>{
     // primitive variables
-    private int die1;
-    private int die2;
     private int points;
     private boolean turnContinues = true;
 
@@ -22,14 +20,6 @@ public class Player implements Comparable<Player>{
     // getters
     public String getName() {
         return this.name;
-    }
-
-    public int getFirstDieNumber() {
-        return this.die1;
-    }
-
-    public int getSecondDieNumber() {
-        return this.die2;
     }
 
     public int getPoints() {
