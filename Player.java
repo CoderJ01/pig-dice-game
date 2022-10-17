@@ -99,7 +99,6 @@ public class Player implements Comparable<Player>{
             }
             else {
                 this.turnContinues = true;
-                break;
             }
         }
         return this.turnContinues;
