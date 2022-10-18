@@ -1,16 +1,22 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
     // array of players
     private static List<Player> players = new ArrayList<>();
+    private static Scanner input = new Scanner(System.in);
+    private static String name;
 
     public static void main(String[] args) {
 
+        // retrieve player's name
+        name = getPlayerName();
+
         // add players to list
-        players.add(new Player("Joshua"));
+        players.add(new Player(name));
         players.add(new CPU("CPU_1"));
         players.add(new CPU("CPU_2"));
         players.add(new CPU("CPU_3"));
@@ -71,5 +77,12 @@ public class Main {
             System.out.println(i + ". " + player.getName());
             i++;
         }
+    }
+
+    // prompt non-CPU player for name
+    private static String getPlayerName() {
+        System.out.print("Enter your name: ");
+        String name = input.next();
+        return name;
     }
 }
