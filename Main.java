@@ -8,12 +8,11 @@ public class Main {
     // array of players
     private static List<Player> players = new ArrayList<>();
     private static Scanner input = new Scanner(System.in);
-    private static String name;
 
     public static void main(String[] args) {
 
         // retrieve player's name
-        name = getPlayerName();
+        String name = getPlayerName();
 
         // add players to list
         players.add(new Player(name));
