@@ -60,18 +60,18 @@ public class Player implements Comparable<Player>{
             // if both dice are 1, then the player loses all his points, and his turn ends
             else if(die1 == 1 && die2 == 1) {
                 this.points = 0;
-                displayInfo(die1, die2); // terminal display
+                displayInfo(die1, die2); 
                 this.turnContinues = false;
             }
             // if one die is 1, the player gets no points, and his turn ends
             else if(die1 == 1 || die2 == 1) {
-                displayInfo(die1, die2); // terminal display
+                displayInfo(die1, die2); 
                 this.turnContinues = false;
             }
             // if the dice are the same number, the player earns points, and the player is obligated to roll again
             else if(die1 == die2) {
                 this.points += (die1 + die2);
-                displayInfo(die1, die2); // terminal display
+                displayInfo(die1, die2); 
                 // obligated roll will always be true
                 if(obligatedRoll()) {
                     this.turnContinues = true;
