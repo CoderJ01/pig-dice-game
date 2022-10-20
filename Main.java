@@ -35,16 +35,13 @@ public class Main {
                 x = 0;
                 y = 0;
             }
-
             // determine points player gets after roll
             players.get(i).determinePoints(x, y);
             players.get(i).getPoints();
-
             // as soon as one of the players has a total of 100 points, end the game
             if(players.get(i).getPoints() >= 100) {
                 break;
             }
-
             // loop only after break condition is checked
             if(i < (players.size() - 1)) {
                 i++;
