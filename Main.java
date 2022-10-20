@@ -31,6 +31,7 @@ public class Main {
                 x = players.get(i).rollFirstDie();
                 y = players.get(i).rollSecondDie();
             }
+            // player earns 0 points for skipping turn
             else {
                 x = 0;
                 y = 0;
