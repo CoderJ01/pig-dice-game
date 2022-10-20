@@ -5,8 +5,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    // array of players
-    private static List<Player> players = new ArrayList<>();
+    private static List<Player> players = new ArrayList<>(); // array of players
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
