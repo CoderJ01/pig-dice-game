@@ -69,7 +69,7 @@ public class Player implements Comparable<Player>{
                 this.turnContinues = false;
             }
             // if the dice are the same number, the player earns points, and the player is obligated to roll again
-            else if(die1 == die2) {
+            else if(die1 == die2 && (die1 != 0 || die2 != 0)) {
                 this.points += (die1 + die2);
                 displayInfo(die1, die2); 
                 // obligated roll will always be true
@@ -80,6 +80,10 @@ public class Player implements Comparable<Player>{
                     // recursion
                     determinePoints(x, y);
                 }
+            }
+            // if player does not roll this, player's turn ends
+            else if(die1 == 0 || die2 == 0) {
+                this.turnContinues = false;
             }
         }
         
@@ -105,7 +109,7 @@ public class Player implements Comparable<Player>{
 
     // provide user the option to roll dice again
     public boolean optionalRoll() {
-        System.out.print("Would you like to roll again? If yes, press the 'y' key: ");
+        System.out.print(this.name + ", would you like to roll the dice? If yes, press the 'y' key: ");
         String option = input.next();
         if(!option.equals("y")) {
             return false;

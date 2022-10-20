@@ -26,9 +26,15 @@ public class Main {
         int x = 0, y = 0;
         // loop through players (turns)
         while(true) {
-            // have player roll dice
-            x = players.get(i).rollFirstDie();
-            y = players.get(i).rollSecondDie();
+            // ask player to roll the dice
+            if(players.get(i).optionalRoll() == true) {
+                x = players.get(i).rollFirstDie();
+                y = players.get(i).rollSecondDie();
+            }
+            else {
+                x = 0;
+                y = 0;
+            }
 
             // determine points player gets after roll
             players.get(i).determinePoints(x, y);
