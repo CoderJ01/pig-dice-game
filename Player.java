@@ -128,6 +128,7 @@ public class Player implements Comparable<Player>{
     }
 
     // sort players by the number of points they have
+    @Override
     public int compareTo(Player rankPlayer) {
         return rankPlayer.points - this.points;
     }
