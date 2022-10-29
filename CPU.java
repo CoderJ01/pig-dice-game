@@ -9,26 +9,24 @@ public class CPU extends Player {
    // force CPU to roll dice again
    @Override
    public boolean optionalRoll() {
-    try {
-        // delay each output by three seconds
-        TimeUnit.SECONDS.sleep(1);
-    }
-    catch(InterruptedException e) {
-        System.out.println("Error");
-    }
+    delay();
     return true;
    }
 
    // force CPU to roll dice again
    @Override
    public boolean obligatedRoll() {
+    delay();
+    return true;
+   }
+
+   private void delay() {
     try {
-        // delay each output by three seconds
+        // delay each output by one second
         TimeUnit.SECONDS.sleep(1);
     }
     catch(InterruptedException e) {
         System.out.println("Error");
     }
-    return true;
    }
 }
