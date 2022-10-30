@@ -93,7 +93,7 @@ public class Player implements Comparable<Player>{
         this.turnContinues = false;
 
         while(!this.turnContinues) {
-            System.out.print("\nYou must roll again. Press the 'r' key to roll dice: ");
+            System.out.print("\nYou must roll again. Enter the 'r' key to roll dice: ");
             String obligated = input.next();
             if(!obligated.equals("r")) {
                 this.turnContinues = false;
@@ -107,7 +107,7 @@ public class Player implements Comparable<Player>{
 
     // provide user the option to roll dice again
     public boolean optionalRoll() {
-        System.out.print("\n" + this.name + ", would you like to roll the dice? If yes, press the 'y' key: ");
+        System.out.print("\n" + this.name + ", would you like to roll the dice? If yes, enter the 'y' key: ");
         String option = input.next();
         if(!option.equals("y")) {
             return false;
