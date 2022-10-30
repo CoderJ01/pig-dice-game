@@ -5,7 +5,7 @@
 
 If a player rolls two dice of the same number, and the dice are neither 1, then the player is obligated to roll the dice again. However, if the player rolls two different numbers that are neither 1, then the player may choose to either roll again or skip the turn. 
 
-To play this game, download the .jar file from [this](https://github.com/CoderJ01/pig-dice-game/tree/main/assets/jar) directory. 
+Download the .jar file [here](https://github.com/CoderJ01/pig-dice-game/blob/main/assets/jar/pig-dice-game.jar) to run the application. For further assistance, read [this](https://github.com/CoderJ01/how-to-run-jar-files) reference repository.
 
 (NOTE: Upon landing on this page from my [portfolio](https://coderj01.github.io/coding-portfolio-website/), one will notice that I have two projects called "Pig". This is the second attempt at creating the code for the dice game via Java (OOP). The first attempt ([codebase](https://github.com/CoderJ01/pig/blob/main/assets/plain_text/codebase.txt)), created originally in early 2020, is based on C/C++.)
 
