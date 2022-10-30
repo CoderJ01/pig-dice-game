@@ -7,7 +7,7 @@ If a player rolls two dice of the same number, and the dice are neither 1, then 
 
 Download the .jar file [here](https://github.com/CoderJ01/pig-dice-game/blob/main/assets/jar/pig-dice-game.jar) to run the application. For further assistance, read [this](https://github.com/CoderJ01/how-to-run-jar-files) reference repository.
 
-(NOTE: Upon landing on this page from my [portfolio](https://coderj01.github.io/coding-portfolio-website/), one will notice that I have two projects called "Pig". This is the second attempt at creating the code for the dice game via Java (OOP). The first attempt ([codebase](https://github.com/CoderJ01/pig/blob/main/assets/plain_text/codebase.txt)), created originally in early 2020, is based on C/C++.)
+(NOTE: Upon landing on this page from my [portfolio](https://coderj01.github.io/coding-portfolio-website/), one will notice that I have two projects called "Pig". This is the second attempt at creating the code for the dice game via Java. The first attempt ([codebase](https://github.com/CoderJ01/pig/blob/main/assets/plain_text/codebase.txt)), created originally in early 2020, is based on C/C++.)
 
 ## Built With
 * Java
