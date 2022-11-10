@@ -18,11 +18,10 @@ public class Main {
 
         // add players to list
         players.add(new Player(name));
-        players.add(new CPU("CPU_1"));
-        players.add(new CPU("CPU_2"));
-        players.add(new CPU("CPU_3"));
-        players.add(new CPU("CPU_4"));
-        players.add(new CPU("CPU_5"));
+        
+        for(int i = 1; i < 6; i++) {
+            players.add(new CPU("CPU_" + i));
+        }
 
         int i = rand.nextInt(players.size()); // first player to roll dice will be randomly determined
         int x = 0, y = 0;
