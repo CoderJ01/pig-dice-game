@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -8,6 +9,7 @@ public class Main {
     // fields
     private static List<Player> players = new ArrayList<>(); // array of players
     private static Scanner input = new Scanner(System.in);
+    private static Random rand = new Random();
 
     public static void main(String[] args) {
 
@@ -22,7 +24,7 @@ public class Main {
         players.add(new CPU("CPU_4"));
         players.add(new CPU("CPU_5"));
 
-        int i = 0;
+        int i = rand.nextInt(players.size()); // first player to roll dice will be randomly determined
         int x = 0, y = 0;
         // loop through players (turns)
         while(true) {
