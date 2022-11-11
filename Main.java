@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
@@ -94,10 +95,25 @@ public class Main {
     // allow player to pick the number of opponents to play against
     private static int opponents() {
         int numberOfOpponents = 0;
+        boolean error = false;
+        int min = 1, max = 9;
+
         while(true) {
-            System.out.print("\nHow many opponents would you like to play against? Enter a number from 1 to 9: ");
-            numberOfOpponents = input.nextInt();
-            if(numberOfOpponents >= 1 && numberOfOpponents <= 9) {
+            do {
+                error = false;
+                try {
+                    System.out.print("\nHow many opponents would you like to play against? Enter a number from " + min + " to " + max + ": ");
+                    numberOfOpponents = input.nextInt();
+                }
+                // prevent user from entering wrong data type
+                catch(InputMismatchException e) {
+                    error = true;
+                    input.nextLine();
+                }
+            } while(error);
+
+            // check that integer is within proper range
+            if(numberOfOpponents >= min && numberOfOpponents <= max) {
                 break;
             }
         }
