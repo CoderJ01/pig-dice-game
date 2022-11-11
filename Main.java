@@ -15,11 +15,12 @@ public class Main {
 
         // retrieve player's name
         String name = getPlayerName();
+        int numberOfOpponents = opponents();
 
         // add players to list
         players.add(new Player(name));
         
-        for(int i = 1; i < 6; i++) {
+        for(int i = 1; i <= numberOfOpponents; i++) {
             players.add(new CPU("CPU_" + i));
         }
 
@@ -88,5 +89,18 @@ public class Main {
         System.out.print("Enter your name: ");
         String name = input.next();
         return name;
+    }
+
+    // allow player to pick the number of opponents to play against
+    private static int opponents() {
+        int numberOfOpponents = 0;
+        while(true) {
+            System.out.print("\nHow many opponents would you like to play against? Enter a number from 1 to 9: ");
+            numberOfOpponents = input.nextInt();
+            if(numberOfOpponents >= 1 && numberOfOpponents <= 9) {
+                break;
+            }
+        }
+        return numberOfOpponents;
     }
 }
