@@ -130,7 +130,7 @@ public class Main {
     private static void gamePlay() {
         System.out.println("\nRULES");
         System.out.println("*****");
-        System.out.println("\nThe first player to reach 100 points wins the game. The amount of points a player scores is the");
+        System.out.println("The first player to reach 100 points wins the game. The amount of points a player scores is the");
         System.out.println("sum of the dice rolled. However, if a player rolls a 1, the player scores no points. If a player");
         System.out.println("rolls two 1's, the player loses all the points said player accumulated throughout the game.");
         
