@@ -16,6 +16,12 @@ public class Main {
 
         // retrieve player's name
         String name = getPlayerName();
+
+        // inquire if player wants to view rules
+        if(viewOrNo(name) == true) {
+            gamePlay(); // describe rules of game
+        }
+
         int numberOfOpponents = opponents();
 
         // add players to list
@@ -99,13 +105,13 @@ public class Main {
         int min = 1, max = 9;
 
         while(true) {
+            // check for correct data type
             do {
                 error = false;
                 try {
                     System.out.print("\nHow many opponents would you like to play against? Enter a number from " + min + " to " + max + ": ");
                     numberOfOpponents = input.nextInt();
                 }
-                // prevent user from entering wrong data type
                 catch(InputMismatchException e) {
                     error = true;
                     input.nextLine();
@@ -118,5 +124,38 @@ public class Main {
             }
         }
         return numberOfOpponents;
+    }
+
+    // describe the rules if the game
+    private static void gamePlay() {
+        System.out.println("\nRULES");
+        System.out.println("*****");
+        System.out.println("\nThe first player to reach 100 points wins the game. The amount of points a player scores is the");
+        System.out.println("sum of the dice rolled. However, if a player rolls a 1, the player scores no points. If a player");
+        System.out.println("rolls two 1's, the player loses all the points said player accumulated throughout the game.");
+        
+        // confirm that player understands the rules
+        String confirmation = "";
+        while(true) {
+            System.out.print("\nEnter 'y' to confirm that you understand the rules: ");
+            confirmation = input.next();
+            if(confirmation.equals("y")) {
+                break;
+            }
+        }
+    }
+
+    // ask if player would like to see the rules
+    private static boolean viewOrNo(String name) {
+        String view = "";
+        System.out.println("\nHello " + name + ", would you like to view the rules of the game? If you would, enter 'y'. If not,");
+        System.out.print("enter any other key: ");
+        view = input.next();
+        if(view.equals("y")) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }
