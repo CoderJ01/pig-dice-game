@@ -133,6 +133,9 @@ public class Main {
         System.out.println("The first player to reach 100 points wins the game. The amount of points a player scores is the");
         System.out.println("sum of the dice rolled. However, if a player rolls a 1, the player scores no points. If a player");
         System.out.println("rolls two 1's, the player loses all the points said player accumulated throughout the game.");
+        System.out.println("\nIf a player rolls two different numbers, then said player may roll again. If a player rolls");
+        System.out.println("two of the same number, then the player must roll again. If a player rolls at least one 1, then");
+        System.out.println("the player's turn ends.");
         
         // confirm that player understands the rules
         String confirmation = "";
