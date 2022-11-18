@@ -5,19 +5,19 @@ public class Player implements Comparable<Player>{
     // fields
     private int points;
     private boolean turnContinues = true;
-    private String name;
+    private final String NAME;
     private Scanner input = new Scanner(System.in);
     private Random rand = new Random();
 
     // constructor
     public Player(String playerName) {
-        this.name = playerName;
+        NAME = playerName;
         this.points = 0;
     }
 
     // getters
     public final String getName() {
-        return this.name;
+        return NAME;
     }
 
     public final int getPoints() {
@@ -107,7 +107,7 @@ public class Player implements Comparable<Player>{
 
     // provide user the option to roll dice again
     public boolean optionalRoll() {
-        System.out.print("\n" + this.name + ", would you like to roll the dice? If yes, enter the 'y' key: ");
+        System.out.print("\n" + NAME + ", would you like to roll the dice? If yes, enter the 'y' key: ");
         String option = input.next();
         if(!option.equals("y")) {
             return false;
@@ -119,7 +119,7 @@ public class Player implements Comparable<Player>{
 
     // display dice numbers and points
     public final void displayInfo(int die1, int die2) {
-        System.out.println("\nPlayer: " + this.name);
+        System.out.println("\nPlayer: " + NAME);
         System.out.println("Die 1: " + die1);
         System.out.println("Die 2: " + die2);
         System.out.println("Points: " + this.points);
