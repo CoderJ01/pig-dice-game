@@ -16,26 +16,26 @@ public class Player implements Comparable<Player>{
     }
 
     // getters
-    public String getName() {
+    public final String getName() {
         return this.name;
     }
 
-    public int getPoints() {
+    public final int getPoints() {
         return this.points;
     }    
 
     // roll first dice
-    public int rollFirstDie() {
+    public final int rollFirstDie() {
         return rand.nextInt(6) + 1;
     }
 
     // roll second dice
-    public int rollSecondDie() {
+    public final int rollSecondDie() {
         return rand.nextInt(6) + 1;
     }
 
     // determine the number of points the player earns
-    public int determinePoints(int die1, int die2) {
+    public final int determinePoints(int die1, int die2) {
 
         this.turnContinues = true;
 
@@ -118,7 +118,7 @@ public class Player implements Comparable<Player>{
     }
 
     // display dice numbers and points
-    public void displayInfo(int die1, int die2) {
+    public final void displayInfo(int die1, int die2) {
         System.out.println("\nPlayer: " + this.name);
         System.out.println("Die 1: " + die1);
         System.out.println("Die 2: " + die2);
@@ -127,7 +127,7 @@ public class Player implements Comparable<Player>{
 
     // sort players by the number of points they have
     @Override
-    public int compareTo(Player rankPlayer) {
+    public final int compareTo(Player rankPlayer) {
         return rankPlayer.points - this.points;
     }
 }

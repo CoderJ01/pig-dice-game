@@ -1,6 +1,6 @@
 import java.util.concurrent.TimeUnit;
 
-public class CPU extends Player {
+public final class CPU extends Player {
    // constructor
    public CPU(String name) {
     super(name);
