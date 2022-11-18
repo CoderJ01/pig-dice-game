@@ -3,21 +3,21 @@ import java.util.concurrent.TimeUnit;
 public final class CPU extends Player {
    // constructor
    public CPU(String name) {
-    super(name);
+        super(name);
    }
 
    // force CPU to roll dice again
    @Override
    public boolean optionalRoll() {
-    delay();
-    return true;
+        delay();
+        return true;
    }
 
    // force CPU to roll dice again
    @Override
    public boolean obligatedRoll() {
-    delay();
-    return true;
+        delay();
+        return true;
    }
 
    private void delay() {
