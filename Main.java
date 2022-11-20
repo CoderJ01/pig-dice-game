@@ -67,12 +67,10 @@ public class Main {
 
     // list the number of points each player has at the end of the game
     private static void listPlayers() {
-        int i = 1;
         System.out.println("\nPOINTS");
         System.out.println("******");
         for (Player player : players) {
-            System.out.println("Player " + i + " (" + player.getName() + ") scored a total of " + player.getPoints() + " points");
-            i++;
+            System.out.println(player.getName() + " scored a total of " + player.getPoints() + " points");
         }
     }
 
