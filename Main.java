@@ -134,6 +134,7 @@ public class Main {
         System.out.println("\nIf a player rolls two different numbers, then said player may roll again. If a player rolls");
         System.out.println("two of the same number, then the player must roll again. If a player rolls at least one 1, then");
         System.out.println("the player's turn ends.");
+        System.out.println("\nThe first player that gets to roll the dice will be selected randomly.");
         
         // confirm that player understands the rules
         String confirmation = "";
