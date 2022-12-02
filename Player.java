@@ -39,12 +39,12 @@ public class Player implements Comparable<Player>{
 
         this.turnContinues = true;
 
-        while(this.turnContinues == true && this.points < 100) {
+        while(this.turnContinues && this.points < 100) {
             // if neither dice is 1 nor the same number, then the sum of the dices values are added to the players points
             if(die1 != 1 && die2 != 1 && (die1 != die2)) {
                 this.points += (die1 + die2);
                 displayInfo(die1, die2); // terminal display
-                if(optionalRoll() == true) {
+                if(optionalRoll()) {
                     this.turnContinues = true;
                     int x = rollFirstDie();
                     int y = rollSecondDie();

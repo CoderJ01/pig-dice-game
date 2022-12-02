@@ -18,7 +18,7 @@ public final class Main {
         String name = getPlayerName();
 
         // inquire if player wants to view rules
-        if(viewOrNo(name) == true) {
+        if(viewOrNo(name)) {
             gamePlay(); // describe rules of game
         }
 
@@ -36,7 +36,7 @@ public final class Main {
         // loop through players (turns)
         while(true) {
             // ask player to roll the dice
-            if(players.get(i).optionalRoll() == true) {
+            if(players.get(i).optionalRoll()) {
                 x = players.get(i).rollFirstDie();
                 y = players.get(i).rollSecondDie();
             }
