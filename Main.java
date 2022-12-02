@@ -37,8 +37,8 @@ public final class Main {
         while(true) {
             // ask player to roll the dice
             if(players.get(i).optionalRoll()) {
-                x = players.get(i).rollFirstDie();
-                y = players.get(i).rollSecondDie();
+                x = players.get(i).rollDie();
+                y = players.get(i).rollDie();
             }
             // player earns 0 points for skipping turn
             else {

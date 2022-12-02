@@ -24,13 +24,8 @@ public class Player implements Comparable<Player>{
         return this.points;
     }    
 
-    // roll first dice
-    public final int rollFirstDie() {
-        return rand.nextInt(6) + 1;
-    }
-
-    // roll second dice
-    public final int rollSecondDie() {
+    // roll die
+    public final int rollDie() {
         return rand.nextInt(6) + 1;
     }
 
@@ -46,8 +41,8 @@ public class Player implements Comparable<Player>{
                 displayInfo(die1, die2); // terminal display
                 if(optionalRoll()) {
                     this.turnContinues = true;
-                    int x = rollFirstDie();
-                    int y = rollSecondDie();
+                    int x = rollDie();
+                    int y = rollDie();
                     // recursion
                     determinePoints(x, y);
                 }
@@ -73,8 +68,8 @@ public class Player implements Comparable<Player>{
                 // obligated roll will always be true
                 if(obligatedRoll()) {
                     this.turnContinues = true;
-                    int x = rollFirstDie();
-                    int y = rollSecondDie();
+                    int x = rollDie();
+                    int y = rollDie();
                     // recursion
                     determinePoints(x, y);
                 }
