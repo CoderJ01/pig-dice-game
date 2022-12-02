@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Main {
+public final class Main {
 
     // fields
     private static List<Player> players = new ArrayList<>(); // array of players
