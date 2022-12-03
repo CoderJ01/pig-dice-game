@@ -60,6 +60,14 @@ public final class Main {
                 i = 0;
             }
         }
+
+        // state winning player
+        System.out.println();
+        for(Player player : players) {
+            if(player.getPoints() >= 100) {
+                System.out.println(player.getName() + " has won the game!");
+            }
+        }
            
         listPlayers();
         rankPlayers();
