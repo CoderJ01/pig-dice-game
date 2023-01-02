@@ -43,8 +43,7 @@ public class Player implements Comparable<Player>{
                     this.turnContinues = true;
                     int x = rollDie();
                     int y = rollDie();
-                    // recursion
-                    determinePoints(x, y);
+                    determinePoints(x, y); // recursion
                 }
                 else {
                     this.turnContinues = false;
@@ -70,7 +69,6 @@ public class Player implements Comparable<Player>{
                     this.turnContinues = true;
                     int x = rollDie();
                     int y = rollDie();
-                    // recursion
                     determinePoints(x, y);
                 }
             }
