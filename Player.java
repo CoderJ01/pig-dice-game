@@ -82,7 +82,7 @@ public class Player implements Comparable<Player>{
     }
 
     // force the player to roll the dice again
-    public boolean obligatedRoll() {
+    protected boolean obligatedRoll() {
         this.turnContinues = false;
 
         while(!this.turnContinues) {
